@@ -1,0 +1,24 @@
+﻿@model ShoeViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="text-center">
+    <h1>Edit</h1>
+</div>
+
+<form asp-controller="Shoe" asp-action="Edit" method="post">
+    <label>Amount In Store</label>
+    <input class="form-control" type="number" name="amountinstore" value="@Model.AmountInStore" />
+    <label>Shoe Type</label>
+    <input class="form-control" type="text" name="shoe type" value="@Model.Type" />
+    <label>Price</label>
+    <input class="form-control" type="number" name="price" value="@Model.Price" />
+    <label>Size</label>
+    <input class="form-control" type="text" name="number" value="@Model.Size" />
+    <div class="text-right mt-2">
+        <button class="btn btn-success " type="submit" asp-route-id="@Model.Id">Edit</button>
+        <a class="btn btn-secondary" asp-action="Shoe">Cancel</a>
+    </div>
+</form>
