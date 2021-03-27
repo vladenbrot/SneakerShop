@@ -1,0 +1,24 @@
+﻿@model CreateOrderViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="text-center">
+    <h1>Create Order</h1>
+</div>
+
+<form asp-controller="Order" asp-action="Create" method="post">
+    <label>Shoe Count</label>
+    <input class="form-control" type="number" name="shoe count" />
+    <label>Shoe Type</label>
+    <input class="form-control" type="text" name="shoe type" />
+    <label>Shoes:</label>
+    <input class="form-control" type="text" name="shoes" />
+    <label>Order Price:</label>
+    <input class="form-control" value="0.0" id="order price" />
+
+    <div class="text-right mt-3">
+        <button class="btn btn-primary" type="submit">Create</button>
+        <a class="btn btn-secondary" asp-action="Order">Cancel</a>
+    </div>
+</form>
